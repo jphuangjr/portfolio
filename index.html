@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Joshua Huang</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/js/bootstrap.js">
+    <style>
+        .vertical-bottom{
+            vertical-align: bottom;
+            padding-top: 10px;
+        }
+        .hero-unit{
+            background-image: url(http://www.vistapointstudio.com/intro_images/center_image_SF.jpg);
+            background-size: cover;
+
+
+        }
+        .hero-unit p{
+            color: black;
+        }
+        h1{
+            color:white;
+        }
+        p{
+            color:white;
+        }
+        body{
+            background: black;
+        }
+        h6{
+            color:#ff0000;
+        }
+        h4{
+            color:white;
+        }
+
+        #magic{
+            color: #00CC00;
+            border-right: 1px solid #777;
+            padding-right: 7px;
+            display: inline;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div class="row">
+
+    <div class="span4 offset1">
+        <h4>Joshua Huang</h4>
+    </div>
+
+    <div class="span2 offset1 vertical-bottom">
+        <a href="http://www.twitter.com/jph941">Twitter</a>
+    </div>
+    <div class="span2 offset1 vertical-bottom">
+        <a href="https://www.linkedin.com/in/jphuangjr">LinkedIn</a>
+    </div>
+
+    <div class="span2 offset1 vertical-bottom">
+        <a href="#">Instagram</a>
+    </div>
+
+</div>
+
+<div class="hero-unit">
+    <h1>Aspiring Full Stack Web and iOS Developer</h1>
+    <p>Some whitty text should go here once I figure out what I want to say! But for now, here is some placeholder text so I an see what it will look like.</p>
+    <p>
+        <a href="#" class="btn btn-primary btn-large">Resume</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="span4 offset1">
+        <strong><h6>Pi Alpha Phi</h6></strong>
+        <p>Built a <a href="http://www.paphirush.com">electronic clipboard</a> for Pi Alpha Phi of University of California, Irvine to help keep rush data organized. Built on LAMP stack using PHP Codeigniter with a mySQL database.</p>
+    </div>
+    <div class="span4 offset1">
+        <strong><h6>Project Title Placeholder</h6></strong>
+        <p>Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text.</p>
+    </div>
+    <div class="span4 offset1">
+        <strong><h6>Project Title Placeholder</h6></strong>
+        <p>Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text. Placeholder text.</p>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="span7 offset5">
+        <br>
+        <br>
+        <h1>Coding is <div id="magic"></div></h1>
+    </div>
+</div>
+
+
+<script>
+
+    (function() {
+
+        var words = ["fun", "exciting", "about\xA0not\xA0giving\xA0up", "being\xA0helpful", "being\xA0open", "what\xA0I\xA0learned\xA0at\xA0CodingDojo!"],
+                el = document.getElementById('magic'),
+                word_counter = 0,
+                character_counter = 0;
+
+        function updateText() {
+            el.innerHTML = el.innerHTML + words[word_counter][character_counter++];
+
+            if (character_counter == words[word_counter].length + 1) {
+                word_counter++; 	//choose a different word
+                character_counter = 0;	//start over with the first character of the word
+                el.innerHTML = '';  //set the html to be blank
+
+                //if we're displaying the last word, go back to the first word
+                if (word_counter == words.length)
+                    word_counter = 0;
+            }
+        }
+        setInterval(updateText,300);
+    }());
+
+
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
